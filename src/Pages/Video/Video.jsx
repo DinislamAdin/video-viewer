@@ -17,7 +17,7 @@ const Video = () => {
     event.preventDefault();
     const videoId = videoLink.split("v=")[1];
     if (videoId) {
-      const embeddedLink = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`;
+      const embeddedLink = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}`;
       const result = Array(Number(number)).fill(embeddedLink);
       setOutput(result);
     } else {
